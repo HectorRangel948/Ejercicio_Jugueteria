@@ -1,11 +1,22 @@
-payasoPeso=112;
-muniecaPeso=75;
 
-payasosVendidos=27;
-muniecasVendidas=14;
+const payasoPeso=112;
+const muniecaPeso=75;
 
-pesoPaquetePayasos=payasosVendidos*payasoPeso;
-pesoPaqueteMunieca=muniecasVendidas*muniecaPeso;
-totalDelPedido =(pesoPaquetePayasos + pesoPaqueteMunieca)/1000;
+let payasosVendidos=prompt("Cantidad de payasos vendidos");
+let muniecasVendidas=prompt("Cantidad de muñecas vendidas");
 
-console.log("Peso total del paquete:"+totalDelPedido+ " kg");
+function calcularPesoTotal(){
+
+    var pesoPaquetePayasos = payasosVendidos*payasoPeso;
+
+    var pesoPaqueteMunieca = muniecasVendidas*muniecaPeso;
+    
+    totalDelPedido =(pesoPaquetePayasos + pesoPaqueteMunieca)/1000;
+
+    return totalDelPedido;
+
+}
+
+var resultado = calcularPesoTotal();
+
+console.log("Peso total del paquete:"+resultado+ " kg");
